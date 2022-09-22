@@ -22,8 +22,14 @@ const dynamicType = {
     }
 }
 
-dynamicType.put(42);
-dynamicType.change("Object as an Object");
-dynamicType.printType();
-dynamicType.change("Object as an Array");
-dynamicType.printType();
+let type = dynamicType;
+
+type.put(42);
+type.change("Array");
+type.printType();
+type.change("Number");
+type.printType();
+type.change("Object as an Object");
+type.printType();
+type.change("Object as an Array");
+type.printType();
