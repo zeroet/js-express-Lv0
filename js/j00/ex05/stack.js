@@ -27,20 +27,20 @@ function stackPush(stack, data)
         }
     }
     else
-        console.log("Empty Array");
+        console.log("Empty Obj");
 }
 
 function stackPeek(stack)
 {
-    if (stack)
+    if (stack.arr[0])
     {
         let num = 0;
         while (stack.arr[num])
             num++;
-        const result = stack.arr[num];
-        return result;
-        
+        return stack.arr[num -1];
     }
+    else
+        console.log("Empty Array");
 }
 
 function stackPop(stack)
@@ -50,8 +50,11 @@ function stackPop(stack)
         let num = 0;
         while (stack.arr[num])
             num++;
-        stack.arr = stack.arr[--num];
+        stack.arr = stack.arr[num - 2];
+        return stack;
     }
+    else
+        console.log("Pop Error");
 }
 
 
@@ -60,6 +63,15 @@ let stack = stackCreate();
 console.log(stack.arr);
 
 console.log(stackEmpty(stack));
-stack = stackPush(stack, 10);
+stack = stackPush(stack, '1');
+console.log(stackEmpty(stack));
+console.log(stack.arr[0]);
+console.log(stack);
 stack = stackPush(stack, 20);
+console.log("**** PEEKKKK ****");
+console.log(stackPeek(stack));
+console.log(stack);
+stack = stackPop(stack);
+console.log(stack);
+console.log("**** PEEKKKK ****");
 console.log(stackPeek(stack));
