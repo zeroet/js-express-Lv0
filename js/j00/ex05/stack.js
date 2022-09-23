@@ -57,21 +57,4 @@ function stackPop(stack)
         console.log("Pop Error");
 }
 
-
-let stack = stackCreate();
-
-console.log(stack.arr);
-
-console.log(stackEmpty(stack));
-stack = stackPush(stack, '1');
-console.log(stackEmpty(stack));
-console.log(stack.arr[0]);
-console.log(stack);
-stack = stackPush(stack, 20);
-console.log("**** PEEKKKK ****");
-console.log(stackPeek(stack));
-console.log(stack);
-stack = stackPop(stack);
-console.log(stack);
-console.log("**** PEEKKKK ****");
-console.log(stackPeek(stack));
+export default {stackCreate, stackEmpty, stackPeek, stackPop, stackPush};
