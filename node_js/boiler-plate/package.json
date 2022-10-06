@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "backend": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "seyun <seyun42@student.fr>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
