@@ -23,9 +23,9 @@ mongoose.connect(config.mongoURI, {
   .catch(err => console.log(err))
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World! hello hello')
-})
+app.get('/', (req, res) => res.send('Hello World! hello hello'))
+
+app.get('/api/hello', (req, res) => res.send("hello LandingPage"))
 
 app.post('api/user/register', (req, res) => {
   // sign up date - > put db

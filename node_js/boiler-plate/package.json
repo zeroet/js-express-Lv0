@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "backend": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "backend": "nodemon ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
   },
   "author": "seyun <seyun42@student.fr>",
   "license": "MIT",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "concurrently": "^7.4.0",
     "cookie-parser": "^1.4.6",
     "jsonwebtoken": "^8.5.1"
   }
